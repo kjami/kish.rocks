@@ -5,122 +5,155 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
+
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116487458-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag () { dataLayer.push(arguments); }
-			gtag('js', new Date());	
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 			gtag('config', 'UA-116487458-1');
 		</script>
 		<title>Kishor's website</title>
 		<meta charset="utf-8" />
 		<meta name="google-site-verification" content="dn061UCClIzg-zlDU3mj65u6WpUHRccuE1LmIj-sNz4" />
-        <link rel="shortcut icon" href="/favicon.ico">
+		<link rel="shortcut icon" href="/favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+			integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+			crossorigin="anonymous">
 	</head>
+
 	<body>
 
 		<!-- Header -->
-			<!-- 
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
-					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Generic</a>
-						<a href="elements.html">Elements</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header> -->
+		<!-- 
+				<header id="header">
+					<div class="inner">
+						<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+						<nav id="nav">
+							<a href="index.html">Home</a>
+							<a href="generic.html">Generic</a>
+							<a href="elements.html">Elements</a>
+						</nav>
+						<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+					</div>
+				</header> -->
 
 		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<header>
-						<h1>Welcome to Kishor's website</h1>
-					</header>
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Welcome</h1>
+				</header>
 
-					<div class="flex ">
+				<div class="flex ">
 
-						<div>
-							<a href="https://docs.google.com/document/d/1yvMIhtg-9_eznplBaeEoVbPw-fGW-ZnONdtgUqWatvU" target="_blank">
-								<span class="icon fa-file"></span>
-								<h3>Resume</h3>
-								<p>View or download</p>
-							</a>
-						</div>
-
-						<div>
-							<a href="#email-form">
-								<span class="icon fa-envelope"></span>
-								<h3>Contact</h3>
-								<p>Send an email</p>
-							</a>
-						</div>
-
-						<div>
-							<a href="#portfolio">
-								<span class="icon fa-sitemap"></span>
-								<h3>Serverless</h3>
-								<p>This website's architecture</p>
-							</a>
-						</div>
+					<div>
+						<a href="https://docs.google.com/document/d/1yvMIhtg-9_eznplBaeEoVbPw-fGW-ZnONdtgUqWatvU"
+							target="_blank">
+							<span class="icon fa-file"></span>
+							<h3>Resume</h3>
+							<p>View or download</p>
+						</a>
 					</div>
 
-					<footer>
-						<a href="#" class="button invisible">Get Started</a>
-					</footer>
+					<div>
+						<a href="#portfolio">
+							<span class="icon fa-jsfiddle"></span>
+							<h3>Work samples</h3>
+							<p>Check demo and code</p>
+						</a>
+					</div>
+					
+					<div>
+						<a href="#email-form">
+							<span class="icon fa-envelope"></span>
+							<h3>Contact</h3>
+							<p>Send an email</p>
+						</a>
+					</div>
 				</div>
-			</section>
+
+				<footer>
+					<a href="#" class="button invisible">Get Started</a>
+				</footer>
+			</div>
+		</section>
+		
+		<!-- portfolio -->
+		<section id="portfolio" class="wrapper align-center">
+			<!-- <div class="inner">
+								<div class="flex flex-2">
+									<div class="align-center" id="architecture">
+										<img id="serverless-arch" src="images/architecture.jpg" />
+									</div>
+								</div>
+							</div> -->
+			<div class="inner">
+				</div><h3>Work Samples</h3>
+				<br/>
+				These applications are deployed using free-tier accounts. Everything should work. In case, if it did not work,
+				please update me using the above form.
+				<div class="inner portfolio-projects" id="portfolio-projects"></div>
+			</div>
+		</section>
 
 		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
+		<footer id="footer">
+			<div class="inner">
 
-					<h3>Get in touch</h3>
+				<h3>Get in touch</h3>
 
-					<form id="email-form">
+				<form id="email-form">
 
-						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
-						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input value="Send Message" class="button alt" id="submit" type="button"></li>
-						</ul>
-					</form>
+					<div class="field half first">
+						<label for="name">Name</label>
+						<input name="name" id="name" type="text" placeholder="Name">
+					</div>
+					<div class="field half">
+						<label for="email">Email</label>
+						<input name="email" id="email" type="email" placeholder="Email">
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+					</div>
+					<ul class="actions">
+						<li><input value="Send Message" class="button alt" id="submit" type="button"></li>
+					</ul>
+				</form>
 
-				</div>
-			</footer>
-			
-		<!-- portfolio -->
-			<section id="portfolio" class="wrapper align-center">
-				<div class="inner">
-					<div class="flex flex-2">
-						<div class="align-center" id="architecture">
-							<img id="serverless-arch" src="images/architecture.jpg" />
+			</div>
+		</footer>
+		<script id="projects-template" type="text/html">
+			<div class="row">
+			{{#projects}}
+				<div class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
+					<div class="project-wrapper">
+						<div class="title">{{name}}</div>
+						<div class="description">{{description}}</div>
+						<div>
+							<button class="btn-demo"><a class="a-demo" href="{{demo}}" target="_blank">DEMO</a></button> <button class="btn-github"><a href="{{github}}" class="a-github" target="_blank">CODE</a></button>
 						</div>
 					</div>
 				</div>
-			</section>
+			{{/projects}}
+			</div>
+		</script>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
+
 </html>

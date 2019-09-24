@@ -42,7 +42,7 @@
 			return;
 		}
 		from = name + " (" + from + ")";
-		$.ajax("https://bmhvy18fyl.execute-api.ap-southeast-1.amazonaws.com/Prod/send-email", {
+		$.ajax("https://38xftl3wn5.execute-api.ap-south-1.amazonaws.com/Prod/static-website-send-email", {
 			method: "POST", 
 			data: JSON.stringify({
 				body: body,
@@ -110,4 +110,31 @@
 
 	});
 
+	const projects = [
+		{ name: 'Task Manager', description: 'A node js API backend to do CRUD on tasks.', github: 'https://github.com/kjami/node-task-manager', demo: 'http://task-manager.kish.rocks/' },
+		{ name: 'Burger Builder', description: 'A burger builder application built using react.', github: 'https://github.com/kjami/react-burger-builder', demo: 'https://react-burger-builder-cf84f.firebaseapp.com/' },
+		{ name: 'Weather Application', description: 'A node js app to search for weather forecast.', github: 'https://github.com/kjami/node-weather-app', demo: 'http://weather.kish.rocks/' },
+		{ name: 'Chat Application', description: 'A node js chat application.', github: 'https://github.com/kjami/node-chat-app', demo: 'http://chat.kish.rocks/' }
+	];
+
+	const $projects = $("#portfolio-projects");
+	const $projectsTemplate = $("#projects-template");
+	const html = Mustache.render($projectsTemplate.html(), { projects: projects })
+	$projects.html(html);
+
+	$('.project-wrapper').on('click', function (ev) {
+		if (ev.originalEvent) {
+			const elem = $(ev.target).closest('.project-wrapper').find('.a-demo')[0]
+			if (elem) elem.click();
+		}
+	});
+
+	$('.btn-github:not(.a-github)').on('click', function (ev) {
+		ev.stopPropagation();
+		ev.stopImmediatePropagation();
+		if (ev.originalEvent) {
+			const elem = $(ev.target).closest('.project-wrapper').find('.a-github')[0]
+			if (elem) elem.click();
+		}
+	});
 })(jQuery);
