@@ -16,11 +16,22 @@
 		white-space: normal !important;
 		text-align: left;
 		border: 1px solid #ccc;
-		box-shadow: 0 2px 3px #eee;
+		box-shadow: 0 10px 5px #eee;
 		margin: 0.5em 0;
-		padding: 1em; 
+		padding: 1em;
 		box-sizing: border-box;
 		background: #f8f8f8;
+		border-radius: 1em;
+	}
+
+	.project-wrapper:active button {
+		background: #ccc;
+	}
+
+	.project-wrapper:active {
+		box-shadow: 0 2px 5px #eee;
+		background: #555 !important;
+		color: #ccc;
 	}
 
 	.project-wrapper:hover {
